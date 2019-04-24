@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace AnagramMaker.Models
@@ -37,5 +38,11 @@ namespace AnagramMaker.Models
       _wordList.Add(word);
     }
 
+    public string SortWord()
+    {
+      char[] toSort = _word.ToCharArray();
+      Array.Sort(toSort);
+      return string.Join("",toSort);
+    }
   }
 }

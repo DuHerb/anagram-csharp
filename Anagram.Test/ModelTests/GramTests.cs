@@ -76,5 +76,16 @@ namespace Anagram.TestTools
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void SortWord_SortWordIntoCharArray_CharArray()
+    {
+      string word = "cat";
+      Gram newGram = new Gram(word);
+      string sortedWord = "act";
+      string result = newGram.SortWord();
+
+      Assert.AreEqual(sortedWord, result);
+    }
+
   }
 }
